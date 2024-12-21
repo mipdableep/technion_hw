@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "the happiest number",
+      "input": "1",
+      "output": "please enter a number:\nthe number 1 is happy"
+    },
+    {
+      "name": "happy number after calculation",
+      "input": "19",
+      "output": "please enter a number:\nthe number 19 is happy"
+    },
+    {
+      "name": "immediately happy number",
+      "input": "1000",
+      "output": "please enter a number:\nthe number 1000 is happy"
+    },
+    {
+      "name": "unhappy number from repeating first calculation",
+      "input": "2",
+      "output": "please enter a number:\nthe number 2 is not happy"
+    },
+    {
+      "name": "unhappy number from repeating calculation in the middle",
+      "input": "14",
+      "output": "please enter a number:\nthe number 14 is not happy"
+    },
+    {
+      "name": "largest number",
+      "input": "2147483647",
+      "output": "please enter a number:\nthe number 2147483647 is not happy"
+    }
+  ]
+}

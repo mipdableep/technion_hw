@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "no jumps",
+      "input": "3 0 0 0",
+      "output": "0"
+    },
+    {
+      "name": "multiple jumps",
+      "input": "7 2 0 2 2 2 4 0",
+      "output": "3"
+    },
+    {
+      "name": "big jump",
+      "input": "6 2 3 10 10 10 0",
+      "output": "1"
+    },
+    {
+      "name": "jump backwards",
+      "input": "6 3 0 1 3000 1 9000",
+      "output": "2"
+    }
+  ]
+}

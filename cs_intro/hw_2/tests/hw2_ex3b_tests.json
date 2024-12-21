@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "no jumps",
+      "input": "3 0 0 0",
+      "output": "0"
+    },
+    {
+      "name": "multiple jumps",
+      "input": "7 2 0 2 2 2 4 0",
+      "output": "3"
+    },
+    {
+      "name": "big jump",
+      "input": "6 2 3 10 10 10 0",
+      "output": "1"
+    },
+    {
+      "name": "jump backwards",
+      "input": "6 3 0 1 3000 1 9000",
+      "output": "2"
+    },
+    {
+      "name": "jump out of array",
+      "input": "1 1000",
+      "output": "-1"
+    },
+    {
+      "name": "jump to array length index",
+      "input": "1 2",
+      "output": "-1"
+    },
+    {
+      "name": "repeating jumps in a row",
+      "input": "2 1 1",
+      "output": "-2"
+    },
+    {
+      "name": "repeating forward and backward jumps",
+      "input": "7 2 1 0 2 3 2 1",
+      "output": "-2"
+    }
+  ]
+}

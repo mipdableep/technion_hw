@@ -1,0 +1,191 @@
+{
+    "tests": [
+        {
+            "input": "h hnnnkgGgHiII",
+            "output": [
+                {
+                    "g": 2
+                },
+                {
+                    "I": 2
+                }
+            ]
+        },
+        {
+            "input": "b abcdEfghIijjJJk",
+            "output": [
+                {
+                    "a": 1
+                },
+                {
+                    "C": 1
+                }
+            ]
+        },
+        {
+            "input": "f ffghFghiJKlmn",
+            "output": [
+                {
+                    "e": 1
+                },
+                {
+                    "G": 1
+                }
+            ]
+        },
+        {
+            "input": "z zzzZzYYyzZzZ",
+            "output": [
+                {
+                    "y": 3
+                },
+                {
+                    "A": 1
+                }
+            ]
+        },
+        {
+            "input": "h hhhHgGgjJjJ",
+            "output": [
+                {
+                    "g": 1
+                },
+                {
+                    "I": 2
+                }
+            ]
+        },
+        {
+            "input": "x xxxxxXxX",
+            "output": [
+                {
+                    "w": 0
+                },
+                {
+                    "Y": 2
+                }
+            ]
+        },
+        {
+            "input": "k kkkkkKKLlmNNN",
+            "output": [
+                {
+                    "j": 0
+                },
+                {
+                    "L": 1
+                }
+            ]
+        },
+        {
+            "input": "q qqqQqRRrs",
+            "output": [
+                {
+                    "p": 0
+                },
+                {
+                    "R": 2
+                }
+            ]
+        },
+        {
+            "input": "t tttTtTzZzZ",
+            "output": [
+                {
+                    "s": 0
+                },
+                {
+                    "U": 3
+                }
+            ]
+        },
+        {
+            "input": "a abcdEFghHh",
+            "output": [
+                {
+                    "z": 0
+                },
+                {
+                    "B": 1
+                }
+            ]
+        },
+        {
+            "input": "m mmmMmmnNNo",
+            "output": [
+                {
+                    "l": 0
+                },
+                {
+                    "N": 2
+                }
+            ]
+        },
+        {
+            "input": "d ddXxd",
+            "output": [
+                {
+                    "c": 0
+                },
+                {
+                    "E": 1
+                }
+            ]
+        },
+        {
+            "input": "b bbbBbbbCbc",
+            "output": [
+                {
+                    "a": 1
+                },
+                {
+                    "C": 1
+                }
+            ]
+        },
+        {
+            "input": "1 12345",
+            "output": "Error"
+        },
+        {
+            "input": "@ aaaa",
+            "output": "Error"
+        },
+        {
+            "input": "# bbb",
+            "output": "Error"
+        },
+        {
+            "input": "9 aab",
+            "output": "Error"
+        },
+        {
+            "input": "* abcde",
+            "output": "Error"
+        },
+        {
+            "input": ", ghijkl",
+            "output": "Error"
+        },
+        {
+            "input": "h@ i",
+            "output": "Error"
+        },
+        {
+            "input": "x xxxxxxx!",
+            "output": "Error"
+        },
+        {
+            "input": "Z zzzZzZZZZ",
+            "output": "Error"
+        },
+        {
+            "input": "? abc",
+            "output": "Error"
+        },
+        {
+            "input": "4 abcdef",
+            "output": "Error"
+        }
+    ]
+}
