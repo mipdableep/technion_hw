@@ -1,0 +1,109 @@
+{
+  "tests": [
+    {
+      "name": "board number below range 1-5",
+      "input": "0\n",
+      "output": "Welcome to Battleship! Please enter board number:\nError in board number, try again\n"
+    },
+    {
+      "name": "board number above range 1-5",
+      "input": "6\n",
+      "output": "Welcome to Battleship! Please enter board number:\nError in board number, try again\n"
+    },
+    {
+      "name": "board number is negative",
+      "input": "-1\n",
+      "output": "Welcome to Battleship! Please enter board number:\nError in board number, try again\n"
+    },
+    {
+      "name": "board number is not a number",
+      "input": "(\n",
+      "output": "Welcome to Battleship! Please enter board number:\n"
+    },
+    {
+      "name": "multiple board number errors",
+      "input": "100\n-100\n&\n",
+      "output": "Welcome to Battleship! Please enter board number:\nError in board number, try again\nError in board number, try again\n"
+    },
+    {
+      "name": "success after board number out of bound",
+      "input": "10\n1\n",
+      "output": "Welcome to Battleship! Please enter board number:\nError in board number, try again\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n"
+    },
+    {
+      "name": "position row above range",
+      "input": "1\n8 A\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\nError in row or column - out of bound\nPlease enter position:\n"
+    },
+    {
+      "name": "position row below range",
+      "input": "1\n-1 H\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\nError in row or column - out of bound\nPlease enter position:\n"
+    },
+    {
+      "name": "position col above range",
+      "input": "1\n0 I\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\nError in row or column - out of bound\nPlease enter position:\n"
+    },
+    {
+      "name": "position was already bombed - same battleship square",
+      "input": "2\n0 A\n0 A\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |S| | | | | | | |\n1 |S| | | | | | | |\n2 |S| | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\nThis position was already bombed - try again!\nPlease enter position:\n"
+    },
+    {
+      "name": "position was already bombed - discovered battleship square",
+      "input": "2\n2 A\n0 A\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |S| | | | | | | |\n1 |S| | | | | | | |\n2 |S| | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\nThis position was already bombed - try again!\nPlease enter position:\n"
+    },
+    {
+      "name": "position was already bombed - empty",
+      "input": "1\n0 A\n0 B\n0 A\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |~| | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |~|~| | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\nThis position was already bombed - try again!\nPlease enter position:\n"
+    },
+    {
+      "name": "multiple position errors",
+      "input": "3\n0 a\n100 Z\n0 B\n0 D\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\nError in row or column - out of bound\nPlease enter position:\nError in row or column - out of bound\nPlease enter position:\n   A B C D E F G H\n0 | |S|S|S| | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\nThis position was already bombed - try again!\nPlease enter position:\n"
+    },
+    {
+      "name": "reversed row and col positions",
+      "input": "5\nA 3\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n"
+    },
+    {
+      "name": "row position is not a number",
+      "input": "1\n% A\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n"
+    },
+    {
+      "name": "col position is not a letter",
+      "input": "1\n0 0\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n"
+    },
+    {
+      "name": "first turn win",
+      "input": "4\n3 H\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |~|~|~|~|~|~|~|~|\n1 |~|~|~|~|~|~|~|~|\n2 |~|~|~|~|~|~|~|~|\n3 |S|S|S|S|S|S|S|S|\n4 |~|~|~|~|~|~|~|~|\n5 |~|~|~|~|~|~|~|~|\n6 |~|~|~|~|~|~|~|~|\n7 |~|~|~|~|~|~|~|~|\nCongratulations, Admiral!\nYou've successfully revealed all 1 submarines in 1 moves!\n"
+    },
+    {
+      "name": "hit ship every turn",
+      "input": "2\n1 A\n6 C\n5 H\n1 C\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |S| | | | | | | |\n1 |S| | | | | | | |\n2 |S| | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |S| | | | | | | |\n1 |S| | | | | | | |\n2 |S| | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | |S|S| | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |S| | | | | | | |\n1 |S| | | | | | | |\n2 |S| | | | | | | |\n3 | | | | | | | |S|\n4 | | | | | | | |S|\n5 | | | | | | | |S|\n6 | |S|S| | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |S|~|~|~|~|~|~|~|\n1 |S|~|S|~|~|~|~|~|\n2 |S|~|S|~|~|~|~|~|\n3 |~|~|S|~|~|~|~|S|\n4 |~|~|~|~|~|~|~|S|\n5 |~|~|~|~|~|~|~|S|\n6 |~|S|S|~|~|~|~|~|\n7 |~|~|~|~|~|~|~|~|\nCongratulations, Admiral!\nYou've successfully revealed all 4 submarines in 4 moves!\n"
+    },
+    {
+      "name": "ships on corners",
+      "input": "5\n0 C\n0 H\n2 C\n3 C\n1 F\n0 A\n3 G\n5 G\n4 D\n5 B\n7 H\n7 A\n7 D\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 | | |S| | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 | | |S| | | | |S|\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 | | |S| | | | |S|\n1 | | | | | | | | |\n2 | | |S| | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 | | |S| | | | |S|\n1 | | | | | | | | |\n2 | | |S| | | | | |\n3 | | |~| | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 | | |S| | | | |S|\n1 | | | | | |S| | |\n2 | | |S| | | | | |\n3 | | |~| | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |S| |S| | | | |S|\n1 | | | | | |S| | |\n2 | | |S| | | | | |\n3 | | |~| | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |S| |S| | | | |S|\n1 | | | | | |S| | |\n2 | | |S| | | | | |\n3 | | |~| | | |S| |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |S| |S| | | | |S|\n1 | | | | | |S| | |\n2 | | |S| | | | | |\n3 | | |~| | | |S| |\n4 | | | | | | | | |\n5 | | | | | | |S| |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |S| |S| | | | |S|\n1 | | | | | |S| | |\n2 | | |S| | | | | |\n3 | | |~| | | |S| |\n4 | | | |S| | | | |\n5 | | | | | | |S| |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |S| |S| | | | |S|\n1 | | | | | |S| | |\n2 | | |S| | | | | |\n3 | | |~| | | |S| |\n4 | | | |S| | | | |\n5 | |S| | | | |S| |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |S| |S| | | | |S|\n1 | | | | | |S| | |\n2 | | |S| | | | | |\n3 | | |~| | | |S| |\n4 | | | |S| | | | |\n5 | |S| | | | |S| |\n6 | | | | | | | | |\n7 | | | | | | | |S|\nPlease enter position:\n   A B C D E F G H\n0 |S| |S| | | | |S|\n1 | | | | | |S| | |\n2 | | |S| | | | | |\n3 | | |~| | | |S| |\n4 | | | |S| | | | |\n5 | |S| | | | |S| |\n6 | | | | | | | | |\n7 |S| | | | | | |S|\nPlease enter position:\n   A B C D E F G H\n0 |S|~|S|~|~|~|~|S|\n1 |~|~|~|~|~|S|~|~|\n2 |~|~|S|~|~|~|~|~|\n3 |~|~|~|~|~|~|S|~|\n4 |~|~|~|S|~|~|~|~|\n5 |~|S|~|~|~|~|S|~|\n6 |~|~|~|~|~|~|~|~|\n7 |S|~|~|S|~|~|~|S|\nCongratulations, Admiral!\nYou've successfully revealed all 12 submarines in 13 moves!\n"
+    },
+    {
+      "name": "win after hitting same ship twice",
+      "input": "1\n5 A\n6 A\n7 D\n1 C\n3 G\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 |S| | | | | | | |\n6 |S| | | | | | | |\n7 |S| | | | | | | |\nPlease enter position:\nThis position was already bombed - try again!\nPlease enter position:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 |S| | |S| | | | |\n6 |S| | |S| | | | |\n7 |S| | |S| | | | |\nPlease enter position:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | |S| | | | | |\n2 | | |S| | | | | |\n3 | | |S| | | | | |\n4 | | | | | | | | |\n5 |S| | |S| | | | |\n6 |S| | |S| | | | |\n7 |S| | |S| | | | |\nPlease enter position:\n   A B C D E F G H\n0 |~|~|~|~|~|~|~|~|\n1 |~|~|S|~|~|~|S|~|\n2 |~|~|S|~|~|~|S|~|\n3 |~|~|S|~|~|~|S|~|\n4 |~|~|~|~|~|~|~|~|\n5 |S|~|~|S|~|~|~|~|\n6 |S|~|~|S|~|~|~|~|\n7 |S|~|~|S|~|~|~|~|\nCongratulations, Admiral!\nYou've successfully revealed all 4 submarines in 4 moves!\n"
+    },
+    {
+      "name": "win after hitting same empty spot twice",
+      "input": "3\n0 A\n0 A\n3 D\n1 H\n3 F\n5 F\n7 H\n7 A\n0 B\n",
+      "output": "Welcome to Battleship! Please enter board number:\n   A B C D E F G H\n0 | | | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |~| | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | | | | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\nThis position was already bombed - try again!\nPlease enter position:\n   A B C D E F G H\n0 |~| | | | | | | |\n1 | | | | | | | | |\n2 | | | | | | | | |\n3 | | | |~| | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |~| | | | | | | |\n1 | | | | | |S|S|S|\n2 | | | | | | | | |\n3 | | | |~| | | | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |~| | | | | | | |\n1 | | | | | |S|S|S|\n2 | | | | | | | | |\n3 | | | |~|S|S| | |\n4 | | | | | | | | |\n5 | | | | | | | | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |~| | | | | | | |\n1 | | | | | |S|S|S|\n2 | | | | | | | | |\n3 | | | |~|S|S| | |\n4 | | | | | | | | |\n5 | | |S|S|S|S| | |\n6 | | | | | | | | |\n7 | | | | | | | | |\nPlease enter position:\n   A B C D E F G H\n0 |~| | | | | | | |\n1 | | | | | |S|S|S|\n2 | | | | | | | | |\n3 | | | |~|S|S| | |\n4 | | | | | | | | |\n5 | | |S|S|S|S| | |\n6 | | | | | | | | |\n7 | | | | | | | |~|\nPlease enter position:\n   A B C D E F G H\n0 |~| | | | | | | |\n1 | | | | | |S|S|S|\n2 | | | | | | | | |\n3 | | | |~|S|S| | |\n4 | | | | | | | | |\n5 | | |S|S|S|S| | |\n6 | | | | | | | | |\n7 |S| | | | | | |~|\nPlease enter position:\n   A B C D E F G H\n0 |~|S|S|S|~|~|~|~|\n1 |~|~|~|~|~|S|S|S|\n2 |~|~|~|~|~|~|~|~|\n3 |~|~|~|~|S|S|~|~|\n4 |~|~|~|~|~|~|~|~|\n5 |~|~|S|S|S|S|~|~|\n6 |~|~|~|~|~|~|~|~|\n7 |S|~|~|~|~|~|~|~|\nCongratulations, Admiral!\nYou've successfully revealed all 5 submarines in 8 moves!\n"
+    }
+  ]
+}
