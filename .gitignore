@@ -2,3 +2,5 @@
 **/.cache
 **/cmake-build*
 **/out
+**/compile_commands.json
+**/build
