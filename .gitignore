@@ -2,3 +2,4 @@
 **/.cache
 **/cmake-build*
 **/out
+**/question_template
