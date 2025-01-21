@@ -2,4 +2,5 @@
 **/.cache
 **/cmake-build*
 **/out
-**/question_template
+**/compile_commands.json
+**/build
